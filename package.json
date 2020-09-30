@@ -30,7 +30,7 @@
     "@uniswap/governance": "^1.0.2",
     "@uniswap/liquidity-staker": "^1.0.2",
     "@uniswap/merkle-distributor": "1.0.1",
-    "@uniswap/sdk": "3.0.3",
+    "@uniswap/sdk": "https://github.com/Kubemake/unislurm-sdk.git#310e35c4",
     "@uniswap/token-lists": "^1.0.0-beta.16",
     "@uniswap/v2-core": "1.0.0",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",

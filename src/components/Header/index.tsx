@@ -261,7 +261,9 @@ const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
-  [ChainId.KOVAN]: 'Kovan'
+  [ChainId.KOVAN]: 'Kovan',
+  [ChainId.TESTBNB]: 'TestBNB',
+  [ChainId.BNB]: 'BNB'
 }
 
 export default function Header() {
