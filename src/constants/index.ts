@@ -3,7 +3,7 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 
-export const ROUTER_ADDRESS = '0x9ca951fddc636b0274a511A40aF3Ea898aa9BCDc'
+export const ROUTER_ADDRESS = '0x5F88Be92ce53Dc18096F0c6c0c7edb224a98E88F'
 
 export const EXPLORER_ADDRESS = 'etherscan.io';
 
