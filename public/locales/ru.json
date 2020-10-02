@@ -72,5 +72,11 @@
   "label": "Название",
   "decimals": "Десятичное значение",
   "enterTokenCont": "Чтобы продолжить, введите адрес токена",
-  "buySlurm": "Купить Slurm"
+  "buySlurm": "Купить Slurm",
+  "yourUNISBreakdown": "Your UNIS Breakdown",
+  "UNISprice": "Цена UNIS",
+  "UNISincirculation": "UNIS в обращении",
+  "totalSupply": "Общее кол-во",
+  "balanceU": "Баланс",
+  "unclaimed": "Невостребованные"
 }
