@@ -18,8 +18,6 @@ import { RowBetween } from '../Row'
 import { Break, CardBGImage, CardNoise, CardSection, DataCard } from '../earn/styled'
 import { useTranslation } from 'react-i18next'
 
-const { t } = useTranslation()
-
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
 `
@@ -45,6 +43,7 @@ const StyledClose = styled(X)`
  */
 export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowUniBalanceModal: any }) {
   const { account, chainId } = useActiveWeb3React()
+  const { t } = useTranslation()
   const uni = chainId ? UNI[chainId] : undefined
 
   const total = useAggregateUniBalance()
