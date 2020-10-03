@@ -16,6 +16,9 @@ import useUSDCPrice from '../../utils/useUSDCPrice'
 import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
 import { Break, CardBGImage, CardNoise, CardSection, DataCard } from '../earn/styled'
+import { useTranslation } from 'react-i18next'
+
+const { t } = useTranslation()
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
