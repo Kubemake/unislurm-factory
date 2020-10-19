@@ -62,8 +62,6 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
     [blockTimestamp, chainId, totalSupply, unclaimedUni, uni]
   )
 
-  const { t } = useTranslation()
-
   return (
     <ContentWrapper gap="lg">
       <ModalUpper>
