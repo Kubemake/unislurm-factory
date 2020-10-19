@@ -62,6 +62,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
     [blockTimestamp, chainId, totalSupply, unclaimedUni, uni]
   )
 
+  const { t } = useTranslation()
+
   return (
     <ContentWrapper gap="lg">
       <ModalUpper>
@@ -118,7 +120,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <TYPE.white color="white">{t('totalSupply')}</TYPE.white>
               <TYPE.white color="white">{totalSupply?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween>
-            {uni && uni.chainId === ChainId.MAINNET ? (
+            {0 && uni && uni.chainId === ChainId.MAINNET ? (//fixme: remove 0 to enable
               <ExternalLink href={`https://uniswap.info/token/${uni.address}`}>View UNI Analytics</ExternalLink>
             ) : null}
           </AutoColumn>

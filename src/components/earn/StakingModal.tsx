@@ -80,7 +80,6 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
 
   const isArgentWallet = useIsArgentWallet()
   const stakingContract = useStakingContract(stakingInfo.stakingRewardAddress)
-
   async function onStake() {
     setAttempting(true)
     if (stakingContract && parsedAmount && deadline) {

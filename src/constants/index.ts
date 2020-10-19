@@ -29,6 +29,8 @@ export const PROPOSAL_LENGTH_IN_DAYS = 7
 
 export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
 
+export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
+
 const UNI_ADDRESS = '0x7611674336151835403c4dB867fDd30782073C65'
 export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNIS', 'UniSlurm'),
@@ -38,6 +40,11 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNIS', 'UniSlurm'),
   [ChainId.TESTBNB]: new Token(ChainId.TESTBNB, UNI_ADDRESS, 18, 'UNIS', 'UniSlurm'),
   [ChainId.BNB]: new Token(ChainId.BNB, UNI_ADDRESS, 18, 'UNIS', 'UniSlurm')
+}
+export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
+  [UNI_ADDRESS]: 'UNIS',
+  [GOVERNANCE_ADDRESS]: 'Governance',
+  [TIMELOCK_ADDRESS]: 'Timelock'
 }
 
 // TODO: specify merkle distributor for mainnet

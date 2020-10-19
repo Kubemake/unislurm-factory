@@ -8,9 +8,7 @@ import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
 import { useActiveWeb3React } from '../../hooks'
-import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances, useAggregateUniBalance } from '../../state/wallet/hooks'
 import { CardNoise } from '../earn/styled'
 import { CountUp } from 'use-count-up'
@@ -41,7 +39,7 @@ const HeaderFrame = styled.div`
   top: 0;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: .5rem 1rem;
   z-index: 2;
   ${({ theme }) => theme.mediaWidth.upToMedium`
     grid-template-columns: 1fr;
@@ -190,6 +188,7 @@ const Title = styled.a`
 `
 
 const UniIcon = styled.div`
+  padding-top: 5px;
   transition: transform 0.3s ease;
   :hover {
     transform: rotate(-5deg);
@@ -239,7 +238,6 @@ export default function Header() {
   const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark] = useDarkModeManager()
 
   const toggleClaimModal = useToggleSelfClaimModal()
 
@@ -264,7 +262,7 @@ export default function Header() {
       <HeaderRow>
         <Title href=".">
           <UniIcon>
-            <img width={'24px'} src={isDark ? LogoDark : Logo} alt="logo" />
+            <img height={'41px'} src={Logo} alt="logo" />
           </UniIcon>
         </Title>
         <HeaderLinks>
