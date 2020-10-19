@@ -16,6 +16,7 @@ import useUSDCPrice from '../../utils/useUSDCPrice'
 import { AutoColumn } from '../Column'
 import { RowBetween } from '../Row'
 import { Break, CardBGImage, CardNoise, CardSection, DataCard } from '../earn/styled'
+import { useTranslation } from 'react-i18next'
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
@@ -59,6 +60,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
         : totalSupply,
     [blockTimestamp, chainId, totalSupply, unclaimedUni, uni]
   )
+
+  const { t } = useTranslation()
 
   return (
     <ContentWrapper gap="lg">
@@ -116,7 +119,7 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <TYPE.white color="white">{t('totalSupply')}</TYPE.white>
               <TYPE.white color="white">{totalSupply?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween>
-            {uni && uni.chainId === ChainId.MAINNET ? (
+            {0 && uni && uni.chainId === ChainId.MAINNET ? (//fixme: remove 0 to enable
               <ExternalLink href={`https://uniswap.info/token/${uni.address}`}>View UNI Analytics</ExternalLink>
             ) : null}
           </AutoColumn>
